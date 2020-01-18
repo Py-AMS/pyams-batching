@@ -10,6 +10,9 @@ This package is composed of a set of utility functions, usable into any Pyramid 
     >>> from pyramid.testing import setUp, tearDown
     >>> config = setUp()
 
+    >>> from pyams_batching import includeme as include_batching
+    >>> include_batching(config)
+
 
 Simple Batching
 ---------------
@@ -272,5 +275,7 @@ Then extract only the first and last items, as well as the neighbourhood of the
 
 'None' can be used to display a separator in a user interface (see pyams_table).
 
+
+Tests cleanup:
 
     >>> tearDown()
