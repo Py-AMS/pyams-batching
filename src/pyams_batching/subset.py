@@ -23,6 +23,9 @@ from pyams_batching.batch import Batch, Batches
 __docformat__ = 'restructuredtext'
 
 
+EMPTY_BATCH_ERROR = "EmptyBatch holds no item"
+
+
 class EmptyBatch(Batch):
     """Empty batch"""
 
@@ -37,17 +40,17 @@ class EmptyBatch(Batch):
 
     @property
     def first_element(self):
-        raise ValueError("EmptyBatch holds no item")
+        raise ValueError(EMPTY_BATCH_ERROR)
 
     @property
     def last_element(self):
-        raise ValueError("EmptyBatch holds no item")
+        raise ValueError(EMPTY_BATCH_ERROR)
 
     def __getitem__(self, key):
-        raise ValueError("EmptyBatch holds no item")
+        raise ValueError(EMPTY_BATCH_ERROR)
 
     def __iter__(self):
-        raise ValueError("EmptyBatch holds no item")
+        raise ValueError(EMPTY_BATCH_ERROR)
 
 
 class SubsetBatches(Batches):
