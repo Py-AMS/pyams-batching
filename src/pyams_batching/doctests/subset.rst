@@ -10,15 +10,15 @@ subset of values actually shown to the user.
 Because we initialize the batch with a subset of data, we also
 need to provide explicitly the length of the full data set.
 
-Let's create a subset of data::
+Let's create a subset of data:
 
     >>> data = range(20, 30)
 
-We use it as part of a longer data set::
+We use it as part of a longer data set:
 
     >>> batch = SubsetBatch(data, length=50, start=20, size=10)
 
-Full API check::
+Full API check:
 
     >>> batch.first_element
     20
@@ -53,7 +53,8 @@ Full API check::
     [25, 26, 27]
 
 You have seen above that the contiguous batches are instances of
-the ``EmptyBatch`` class. As those instances hold no data, we raise errors to ensure that no batch provider tries to display item data::
+the ``EmptyBatch`` class. As those instances hold no data, we raise errors to ensure that no
+batch provider tries to display item data:
 
     >>> empty = batch.next
     >>> empty
