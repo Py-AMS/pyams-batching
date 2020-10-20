@@ -4,4 +4,5 @@
 !/bin/
 !/parts/
 !/develop-eggs/
+!/src/pyams_batching/**/__pycache__/
 !/src/pyams_batching.egg-info/
