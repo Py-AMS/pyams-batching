@@ -1,2 +1,3 @@
 [run]
 source = src/pyams_batching
+omit = src/pyams_batching/tests/*
